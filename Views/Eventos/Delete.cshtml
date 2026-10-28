@@ -1,0 +1,5 @@
+@model Eventos.Web.Models.Evento
+@{ ViewData["Title"] = "Eliminar evento"; }
+<h1>Desactivar evento</h1><div class="alert alert-warning">La eliminación es lógica. El evento dejará de aparecer, pero sus datos se conservarán.</div>
+<div class="card shadow-sm"><div class="card-body"><h5>@Model.Titulo</h5><p class="mb-0">@Model.Fecha.ToString("dd/MM/yyyy HH:mm") · @Model.Lugar</p></div></div>
+<form asp-action="Delete" method="post" class="mt-3"><input type="hidden" asp-for="Id"><button class="btn btn-danger">Confirmar desactivación</button> <a asp-action="Index" class="btn btn-outline-secondary">Cancelar</a></form>
